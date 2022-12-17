@@ -5,12 +5,6 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-defineProps({
-  city: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <template>
@@ -31,7 +25,7 @@ defineProps({
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Weather for {{city}}</template>
+    <template v-if="city" #heading>Weather for {{city}}</template>
 
     For more projects checkout my
     <a href="https://github.com/simonfrayer" target="_blank" rel="noopener">GitHub</a>
@@ -56,3 +50,11 @@ defineProps({
   
     </WelcomeItem>
 </template>
+
+
+
+<script>
+export default {
+  props: ['city'],  
+}
+</script>

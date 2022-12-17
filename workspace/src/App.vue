@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
@@ -10,20 +9,20 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="Weather Forecast" />
-      <div class="text-3xl bg-slate-100 rounded-lg p-4 flex flex-row justify-round w-[100%] mt-4">
-        <input v-model="city" placeholder="London" class="w-[60%] mr-5 rounded-md p-2" />
+      <div class="text-3xl bg-slate-100 rounded-lg p-4 flex flex-row justify-between w-[100%] mt-4">
+        <input v-model="city" placeholder="London" class="w-[60%] mr-5 rounded-md p-2 text-md" />
         <button v-on:click="getList" class=" bg-slate-400 border-4 rounded-2xl p-2 text-sm">Get Weather</button>
       </div>
       
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/" >Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <RouterView :city="city"/>
  
 </template>
 
@@ -34,7 +33,7 @@ import key from '@/api/apiKey.json'
 export default {
   data() {
     return {
-      city: '',
+      city: 'London',
       apiKey: key.apiKey,
     }
   },
