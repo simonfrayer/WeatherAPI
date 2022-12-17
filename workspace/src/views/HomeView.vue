@@ -4,12 +4,12 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
   <main>
-    <TheWelcome :city="city"/>
+    <TheWelcome :city="city" :weatherData="weatherData"/>
   </main>
 </template>
 
 <script>
 export default {
-  props: ['city'],  
+  props: ['city', 'weatherData'],  
 }
 </script>

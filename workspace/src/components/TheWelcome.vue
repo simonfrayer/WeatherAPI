@@ -28,6 +28,7 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #heading>Weather for {{city}}</template>
 
     <div class="weatherIcon"></div>
+    <div class="weatherData">{{weatherData}}</div>
     </WelcomeItem>
 
   <!-- <WelcomeItem>
@@ -53,6 +54,6 @@ import SupportIcon from './icons/IconSupport.vue'
 
 <script>
 export default {
-  props: ['city'],  
+  props: ['city', 'weatherData'],  
 }
 </script>

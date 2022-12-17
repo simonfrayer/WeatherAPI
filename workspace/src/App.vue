@@ -22,7 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </header>
 
-  <RouterView :city="city"/>
+  <RouterView :city="city" :weatherData="weatherData"/>
  
 </template>
 
@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       city: '',
+      weatherData: [],
       apiKey: key.apiKey,
     }
   },
@@ -42,6 +43,7 @@ export default {
       let api = `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}&units=metric`;
       axios.get(api).then((response) => {
         console.log(response.data)
+        this.weatherData = response
       })
     }
   },
