@@ -25,10 +25,10 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Weather for {{city}}</template>
+    <template #heading>Weather for {{weatherData.data.name}}</template>
 
     <div class="weatherIcon"></div>
-    <div class="weatherData">{{weatherData}}</div>
+    <div class="weatherData">{{weatherData.data}}</div>
     </WelcomeItem>
 
   <!-- <WelcomeItem>
@@ -54,6 +54,6 @@ import SupportIcon from './icons/IconSupport.vue'
 
 <script>
 export default {
-  props: ['city', 'weatherData'],  
+  props: ['weatherData'],  
 }
 </script>
