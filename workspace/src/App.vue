@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       city: '',
-      weatherData: [],
+      weatherData: JSON,
       apiKey: key.apiKey,
     }
   },
