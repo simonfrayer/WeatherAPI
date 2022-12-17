@@ -27,9 +27,7 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template #heading>Weather for {{city}}</template>
 
-    For more projects checkout my
-    <a href="https://github.com/simonfrayer" target="_blank" rel="noopener">GitHub</a>
-    .
+    <div class="weatherIcon"></div>
     </WelcomeItem>
 
   <!-- <WelcomeItem>
