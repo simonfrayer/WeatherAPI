@@ -25,7 +25,7 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template v-if="city" #heading>Weather for {{city}}</template>
+    <template #heading>Weather for {{city}}</template>
 
     For more projects checkout my
     <a href="https://github.com/simonfrayer" target="_blank" rel="noopener">GitHub</a>

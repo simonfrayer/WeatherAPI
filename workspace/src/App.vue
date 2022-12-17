@@ -33,7 +33,7 @@ import key from '@/api/apiKey.json'
 export default {
   data() {
     return {
-      city: 'London',
+      city: '',
       apiKey: key.apiKey,
     }
   },

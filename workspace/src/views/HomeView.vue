@@ -4,7 +4,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
   <main>
-    <TheWelcome v-if="city" :city="city"/>
+    <TheWelcome :city="city"/>
   </main>
 </template>
 
