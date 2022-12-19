@@ -25,7 +25,7 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template  #heading>Weather for {{weatherData.data.name}}</template>
+    <template  #heading>Current Weather in {{weatherData.data.name}}</template>
     <div class="weatherSection">
       <div class="weatherMain flex flex-row justify-between items-center">
         <div class="flex flex-row items-center">

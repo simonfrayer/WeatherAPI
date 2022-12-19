@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="text-[#E4866A]">{{ msg }}</h1>
     <h3>
       See the weather forecast for any location!
     </h3>

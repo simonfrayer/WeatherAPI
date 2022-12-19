@@ -5,10 +5,10 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="logo" class="logo" src="@/assets/logo.png" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="Weather Forecast" />
+      <HelloWorld msg="Gut Wetr" />
       <div class="text-3xl bg-slate-100 rounded-lg p-4 flex flex-row justify-between w-[100%] mt-4">
         <input v-model="city" placeholder="London" class="w-[60%] mr-5 rounded-md p-2 text-md" />
         <button v-on:click="getList" class=" bg-slate-400 border-4 rounded-2xl p-2 text-sm">Get Weather</button>
@@ -17,7 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/" >Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">Daily Forecast</RouterLink>
       </nav>
     </div>
   </header>
@@ -64,6 +64,7 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+  border-radius: 10%;
 }
 
 nav {
