@@ -17,7 +17,7 @@ import SupportIcon from './icons/IconSupport.vue'
     Write any city into the input field and see the current weather forecast for that location.
     The data are gathered from 
     <a href="https://openweathermap.org/" target="_blank" rel="noopener">openweathermap.org</a>
-    where you can get up to 1000 free requests per day.
+    where you can get up to 1000 free API requests per day.
   
   </WelcomeItem> 
 
@@ -26,9 +26,15 @@ import SupportIcon from './icons/IconSupport.vue'
       <EcosystemIcon />
     </template>
     <template  #heading>Weather for {{weatherData.data.name}}</template>
-
-    <div class="weatherIcon"></div>
-    <div class="weatherData">{{weatherData.data}}</div>
+    <div class="weatherSection">
+      <div class="weatherIcon">
+        <img :src="'https://openweathermap.org/img/wn/' + weatherData.data.weather[0].icon + '.png'" alt="weather icon">
+      </div>
+      <div class="weatherData">
+        {{weatherData.data}}
+      </div>
+    </div>
+    
     </WelcomeItem>
 
   <!-- <WelcomeItem>
