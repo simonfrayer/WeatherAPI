@@ -27,11 +27,34 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template  #heading>Weather for {{weatherData.data.name}}</template>
     <div class="weatherSection">
-      <div class="weatherIcon">
-        <img :src="'https://openweathermap.org/img/wn/' + weatherData.data.weather[0].icon + '.png'" alt="weather icon">
+      <div class="weatherMain flex flex-row justify-between items-center">
+        <div class="flex flex-row items-center">
+          <div class="weatherIcon">
+        <img :src="'https://openweathermap.org/img/wn/' + weatherData.data.weather[0].icon + '.png'" alt="weather icon" class="w-24">
       </div>
-      <div class="weatherData">
-        {{weatherData.data}}
+      <div class="weatherTemp text-4xl">
+        {{getTemperatureWithOneDecimal()}} °C
+      </div>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="windIcon w-24 flex justify-center">
+        <font-awesome-icon icon="fa-solid fa-wind" class="text-3xl"/>
+      </div>
+      <div class="windSpeed text-3xl">
+        {{weatherData.data.wind.speed}} m/s
+      </div>
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-center items-center">
+        <div class="sunrise pr-4">
+          <font-awesome-icon icon="fa-solid fa-sun" />
+           {{getFormattedTimeFromSeconds(weatherData.data.sys.sunrise)}}
+        </div>
+        <div class="sunset pl-4">
+          <font-awesome-icon icon="fa-solid fa-moon" />
+           {{getFormattedTimeFromSeconds(weatherData.data.sys.sunrise)}}
+        </div>
       </div>
     </div>
     
@@ -66,5 +89,15 @@ export default {
       data: this.weatherData.data
     }
   },
+  methods: {
+    getTemperatureWithOneDecimal() {
+      return this.weatherData.data.main.temp.toFixed(1)
+    },
+
+    getFormattedTimeFromSeconds(seconds) {
+      let date = new Date(seconds * 1000)
+      return date.toLocaleTimeString()
+    }
+  }
 }
 </script>
