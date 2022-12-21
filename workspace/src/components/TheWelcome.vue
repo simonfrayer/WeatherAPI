@@ -14,7 +14,7 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template id="weather" #heading>Current Weather in {{weatherData.data.name}}</template>
     <div class="weatherSection">
-      <div class="weatherMain flex flex-col lg:flex-row justify-around lg:justify-between items-center">
+      <div class="weatherMain flex flex-col lg:flex-row justify-around lg:justify-between">
         <div class="flex flex-row items-center">
           <div class="weatherIcon">
         <img :src="'https://openweathermap.org/img/wn/' + weatherData.data.weather[0].icon + '.png'" alt="weather icon" class="w-24">
@@ -33,7 +33,7 @@ import SupportIcon from './icons/IconSupport.vue'
         </div>
       </div>
 
-      <div class="flex flex-col lg:flex-row justify-center items-center pt-6 lg:pt-2">
+      <div class="flex flex-row justify-start lg:justify-center pt-6 lg:pt-2 pl-6 lg:pl-0">
         <div class="sunrise p-2 lg:pr-4 text-sm lg:text-lg">
           <font-awesome-icon icon="fa-solid fa-sun" />
            {{getFormattedTimeFromSeconds(weatherData.data.sys.sunrise)}}
