@@ -28,19 +28,19 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <script>
 import axios from 'axios';
-import key from '@/api/apiKey.json'
 
 export default {
   data() {
     return {
       city: '',
       weatherData: JSON,
-      apiKey: key.apiKey,
+      apiKey: import.meta.env.VITE_API_KEY
     }
   },
   methods: {
-    getList(city) {
+    getList() {
       let api = `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}&units=metric`;
+      console.log(this.apiKey)
       axios.get(api).then((response) => {
         console.log(response.data)
         this.weatherData = response
