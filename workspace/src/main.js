@@ -19,11 +19,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faWind } from '@fortawesome/free-solid-svg-icons'
 import {faSun} from '@fortawesome/free-solid-svg-icons'
 import {faMoon} from '@fortawesome/free-solid-svg-icons'
+import{faLaptopCode} from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(faWind)
 library.add(faSun)
 library.add(faMoon)
+library.add(faLaptopCode)
 
 
 const app = createApp(App)

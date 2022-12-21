@@ -1,6 +1,7 @@
 <template>
-  <div class="about">
-    <h1>Still in developmetn process...</h1>
+  <div class="about flex flex-col justify-center items-center text-2xl">
+    <font-awesome-icon icon="fa-solid fa-laptop-code" class="pb-4" />
+    <h1>Still in development process...</h1>
   </div>
 </template>
 
