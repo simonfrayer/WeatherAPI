@@ -40,7 +40,6 @@ export default {
   methods: {
     getList() {
       let api = `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}&units=metric`;
-      console.log(this.apiKey)
       axios.get(api).then((response) => {
         console.log(response.data)
         this.weatherData = response

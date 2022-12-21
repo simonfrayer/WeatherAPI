@@ -8,24 +8,11 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-     <template #heading>Documentation</template>
-
-    Write any city into the input field and see the current weather forecast for that location.
-    The data are gathered from 
-    <a href="https://openweathermap.org/" target="_blank" rel="noopener" class="text-[#E4866A]">openweathermap.org</a>
-    where you can get up to 1000 free API requests per day.
-  
-  </WelcomeItem> 
-
   <WelcomeItem v-if="weatherData.data">
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template  #heading>Current Weather in {{weatherData.data.name}}</template>
+    <template id="weather" #heading>Current Weather in {{weatherData.data.name}}</template>
     <div class="weatherSection">
       <div class="weatherMain flex flex-col lg:flex-row justify-around lg:justify-between items-center">
         <div class="flex flex-row items-center">
@@ -59,6 +46,21 @@ import SupportIcon from './icons/IconSupport.vue'
     </div>
     
     </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <DocumentationIcon />
+    </template>
+     <template #heading>Documentation</template>
+
+    Write any city into the input field and see the current weather forecast for that location.
+    The data are gathered from 
+    <a href="https://openweathermap.org/" target="_blank" rel="noopener" class="text-[#E4866A]">openweathermap.org</a>
+    where you can get up to 1000 free API requests per day.
+  
+  </WelcomeItem> 
+
+  
 
   <!-- <WelcomeItem>
     <template #icon>
@@ -97,7 +99,7 @@ export default {
     getFormattedTimeFromSeconds(seconds) {
       let date = new Date(seconds * 1000)
       return date.toLocaleTimeString()
-    }
-  }
+    },
+  },
 }
 </script>
