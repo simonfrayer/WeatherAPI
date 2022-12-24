@@ -40,7 +40,7 @@ import SupportIcon from './icons/IconSupport.vue'
         </div>
         <div class="sunset p-2 lg:pl-4 text-sm lg:text-lg">
           <font-awesome-icon icon="fa-solid fa-moon" />
-           {{getFormattedTimeFromSeconds(weatherData.data.sys.sunrise)}}
+           {{getFormattedTimeFromSeconds(weatherData.data.sys.sunset)}}
         </div>
       </div>
     </div>
