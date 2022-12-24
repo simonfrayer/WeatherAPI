@@ -10,7 +10,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="wrapper">
       <HelloWorld msg="Gut Wetr" />
       <div class="text-3xl bg-slate-100 rounded-lg p-4 flex flex-row justify-between w-[100%] mt-4">
-        <input v-model="city" placeholder="London" class="w-[60%] mr-5 rounded-md p-2 text-md border-[#E4866A]" />
+        <input v-model="city" placeholder="London" class="w-[60%] mr-5 rounded-md p-2 text-md border-[#E4866A] text-black" />
         <button v-on:click="getList" class=" bg-[#E4866A] border-4 rounded-2xl p-2 text-sm"><b>Get</b> Weather</button>
       </div>
       
