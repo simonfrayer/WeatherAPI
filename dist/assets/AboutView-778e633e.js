@@ -1,0 +1,1 @@
+import{_ as o,r as t,o as s,c,a as n,b as a}from"./index-76fa8503.js";const _={},l={class:"about flex flex-col justify-center items-center text-2xl"},r=a("h1",null,"Still in development process...",-1);function i(f,p){const e=t("font-awesome-icon");return s(),c("div",l,[n(e,{icon:"fa-solid fa-laptop-code",class:"pb-4 pt-4"}),r])}const m=o(_,[["render",i]]);export{m as default};
